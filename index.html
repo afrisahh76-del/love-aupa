@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk Aupa ❤️</title>
+
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Georgia', serif;
+  background: #ffc0cb;
+  overflow: hidden;
+}
+
+/* KOTAK SURAT */
+.surat {
+  position: relative;
+  max-width: 330px;
+  margin: 60px auto;
+  background: rgba(255,255,255,0.95);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  line-height: 1.8;
+  color: #333;
+}
+
+/* JUDUL */
+.surat h1 {
+  text-align: center;
+  color: red;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+/* TEKS SURAT */
+.surat p {
+  text-align: justify;
+  text-indent: 20px;
+  margin-bottom: 12px;
+}
+
+/* LOVE JATUH */
+.hearts span {
+  position: absolute;
+  display: block;
+  animation: jatuh linear infinite;
+  font-size: 20px;
+}
+
+@keyframes jatuh {
+  0% { top: -10%; opacity: 1; }
+  100% { top: 110%; opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="surat">
+  <h1>Untuk Aupa, my JF tersayang 💕</h1>
+
+  <p>
+    Aupa, kamu itu istimewa di mata aku. 
+    Bukan cuma soal cantik, tapi juga cara kamu bikin aku nyaman tanpa harus berusaha terlalu keras. 
+    Setiap kamu hadir, rasanya semua jadi lebih tenang dan lebih berarti.
+  </p>
+
+  <p>
+    Aku suka semua tentang kamu—cara kamu senyum, cara kamu ngomong, 
+    bahkan hal-hal kecil yang mungkin kamu anggap biasa, 
+    tapi buat aku itu berharga banget 💖
+  </p>
+
+  <p>
+    Aupa, jangan pernah ngerasa kurang ya. 
+    Karena di mata aku, kamu selalu lebih dari cukup, bahkan sempurna dengan caramu sendiri.
+  </p>
+
+  <p style="text-align:right;">
+    Aku sayang kamu, selalu 🤍
+  </p>
+</div>
+
+<div class="hearts"></div>
+
+<script>
+const heartsContainer = document.querySelector('.hearts');
+
+function createHeart() {
+  const heart = document.createElement('span');
+  heart.innerText = '💖';
+
+  heart.style.left = Math.random() * 100 + 'vw';
+  heart.style.animationDuration = (4 + Math.random() * 4) + 's';
+
+  heartsContainer.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 5000);
+}
+
+setInterval(createHeart, 700);
+</script>
+
+</body>
+</html>
